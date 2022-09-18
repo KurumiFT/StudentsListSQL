@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#222222">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:text="Список студентов (Sqlite)"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/name"
+                android:hint="Имя студента" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/add"
+                android:text="Добавить"
+                android:backgroundTint="@color/teal_200"
+                android:layout_weight=".6"
+                android:textSize="12sp"
+                android:layout_marginLeft="2dp"
+                app:strokeWidth="2dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:id="@+id/remove"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/design_default_color_error"
+                android:text="Удалить"
+                android:layout_marginLeft="2dp"
+                android:textSize="12sp"
+                android:layout_weight=".6"
+                app:strokeWidth="2dp"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="multipleChoice"
+
+            android:id="@+id/data_list"/>
+
+    </LinearLayout>
+</ScrollView>
+
+
